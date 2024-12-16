@@ -1,0 +1,16 @@
+
+<div class="tabs">
+  <!-- Tab Buttons -->
+  <button (click)="selectTab(false)" [class.active]="selectedTab">Active Business</button>
+  <button (click)="selectTab(true)" [class.active]="!selectedTab">Active People</button>
+</div>
+
+<div>
+  <div *ngIf="selectedTab">
+    <app-most-active-people></app-most-active-people>
+  </div>
+  <div *ngIf="!selectedTab">
+    <app-most-active-business></app-most-active-business>
+
+  </div>
+</div>

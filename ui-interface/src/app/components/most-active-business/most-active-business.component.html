@@ -1,0 +1,14 @@
+<div class="filter-container">
+    <label for="maxValues">Number of Values to Display:</label>
+    <input
+      id="maxValues"
+      type="number"
+      [(ngModel)]="maxValues"
+      (change)="getActiveBusinessData()"
+      min="1"
+      max="50"
+    />
+  </div>
+  
+  <div id="barChart"></div>
+  
